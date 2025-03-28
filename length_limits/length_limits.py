@@ -21,12 +21,11 @@ def get_list_from_txt(path_to_file: str) -> list[str]:
     """Return list of strings from txt file"""
     absolute_path = os.path.dirname(__file__)
     path = f"{absolute_path}/{path_to_file}"
-    with open(path, "r") as f:
+    with open(path, "r", encoding="utf-8") as f:
         text = f.read()
     return text.split("\n")
-            
+
 
 if __name__ == "__main__":
     message = get_list_from_txt("input.txt")
-    msg_cost = get_message_cost(message)
-    print(msg_cost)
+    print(get_message_cost(message))
