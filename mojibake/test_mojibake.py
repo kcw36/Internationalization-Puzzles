@@ -1,7 +1,8 @@
 # pylint: skip-file
 
-from mojibake import complete_crossword
+from mojibake.mojibake import complete_crossword
 
 
-def test_complete_crossword(crossword, degarbled):
-    assert 50 == complete_crossword(crossword, degarbled)
+def test_complete_crossword(test_mojibake):
+    degarbled, crossword = test_mojibake
+    assert 50 == complete_crossword(degarbled, crossword)

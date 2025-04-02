@@ -3,6 +3,7 @@
 import pytest
 from world_trip.world_trip import get_dicts_from_txt
 from step_in.step_in import get_park_from_txt
+from mojibake.mojibake import get_inputs_from_txt
 
 
 @pytest.fixture
@@ -30,3 +31,8 @@ def test_input():
 @pytest.fixture
 def test_park():
     return get_park_from_txt("test_input.txt")
+
+
+@pytest.fixture
+def test_mojibake():
+    return get_inputs_from_txt("test_input.txt")
