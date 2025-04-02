@@ -3,7 +3,7 @@
 import pytest
 from world_trip.world_trip import get_dicts_from_txt
 from step_in.step_in import get_park_from_txt
-from mojibake.mojibake import get_inputs_from_txt
+from mojibake.mojibake import get_inputs_from_txt, degarble
 
 
 @pytest.fixture
@@ -35,4 +35,5 @@ def test_park():
 
 @pytest.fixture
 def test_mojibake():
-    return get_inputs_from_txt("test_input.txt")
+    words, puzzle = get_inputs_from_txt("test_input.txt")
+    return (degarble(words), puzzle)
