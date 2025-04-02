@@ -21,3 +21,7 @@ Generate travel time for a list of flights from a travel itinerary. <a>https://i
 ## Puzzle 5 - Don't step in it
 
 Given a rectangular park input with safe squares and poo squares, the user walks a fixed diagonal repeating pattern. Identify for any pattern how many times the user would step in poo. <a>https://i18n-puzzles.com/puzzle/5/</a>
+
+## Puzzle 5 - Mojibake
+
+Fill in a crossword type puzzle with matching words from an input list. Some matching words have been corrupted can you fix it? <a>https://i18n-puzzles.com/puzzle/6/</a>
