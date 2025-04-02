@@ -1,6 +1,8 @@
 # pylint: skip-file
 
 import pytest
+from world_trip.world_trip import get_dicts_from_txt
+from step_in.step_in import get_park_from_txt
 
 
 @pytest.fixture
@@ -18,3 +20,13 @@ def test_recordings():
             "2019-06-05T05:15:00-07:00",
             "2011-02-01T09:15:00-03:00",
             "2011-02-01T09:15:00-05:00"]
+
+
+@pytest.fixture
+def test_input():
+    return get_dicts_from_txt("test_input.txt")
+
+
+@pytest.fixture
+def test_park():
+    return get_park_from_txt("test_input.txt")

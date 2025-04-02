@@ -13,3 +13,11 @@ Find a time from a list of gravitational reading timestamps when 4 readings were
 ## Puzzle 3 - unicode Passwords
 
 Write a program that checks if each password meets the requirements. Your answer should be the number of passwords that are valid. In the test input given above, the number of valid passwords is '2'. <a>https://i18n-puzzles.com/puzzle/3/</a>
+
+## Puzzle 4 - World Trip
+
+Generate travel time for a list of flights from a travel itinerary. <a>https://i18n-puzzles.com/puzzle/4/</a>
+
+## Puzzle 5 - Don't step in it
+
+Given a rectangular park input with safe squares and poo squares, the user walks a fixed diagonal repeating pattern. Identify for any pattern how many times the user would step in poo. <a>https://i18n-puzzles.com/puzzle/5/</a>
