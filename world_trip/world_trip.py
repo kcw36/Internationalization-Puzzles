@@ -1,21 +1,22 @@
 """Calculate travel itinery travel time"""
 
 from os import path
-from datetime import datetime, timezone, timedelta
+from datetime import datetime
 from zoneinfo import ZoneInfo
+
 
 def get_travel_time(itinery: list[dict]) -> int:
     """Return travel minutes from itinery list"""
     travel_time = 0
     for leg in itinery:
-        print(leg["arr_date"], leg["dep_date"])
-        arrival = datetime.strptime(leg["arr_date"], r"%b %j, %Y, %H:%M").replace(tzinfo=ZoneInfo(leg["arr_location"]))
-        departure = datetime.strptime(leg["dep_date"], r"%b %j, %Y, %H:%M").replace(tzinfo=ZoneInfo(leg["dep_location"]))
-        print(arrival, departure)
+        arrival = datetime.strptime(leg["arr_date"], r"%b %d, %Y, %H:%M").replace(
+            tzinfo=ZoneInfo(leg["arr_location"]))
+        departure = datetime.strptime(leg["dep_date"], r"%b %d, %Y, %H:%M").replace(
+            tzinfo=ZoneInfo(leg["dep_location"]))
         delta = arrival - departure
-        print(delta)
         travel_time += delta.total_seconds() / 60
-    return travel_time
+    return int(travel_time)
+
 
 def get_dicts_from_txt(path_to_file: str) -> list[dict]:
     """Return list of dicts of travel legs from text data"""
@@ -37,5 +38,4 @@ def get_dicts_from_txt(path_to_file: str) -> list[dict]:
 
 
 if __name__ == "__main__":
-    #print(get_travel_time(get_dicts_from_txt("input.txt")))
-    print(get_dicts_from_txt("input.txt"))
+    print(get_travel_time(get_dicts_from_txt("input.txt")))
